@@ -6,10 +6,7 @@
 #endif
 
 #if !ENABLE_LOG
-using System;
-using Color = UnityEngine.Color;
-using Object = UnityEngine.Object;
-using Vector3 = UnityEngine.Vector3;
+using UnityEngine;
 
 public class Debug
 {
@@ -100,12 +97,12 @@ public class Debug
     }
 
     [System.Diagnostics.Conditional("ENABLE_LOG")]
-    public static void LogException(Exception exception)
+    public static void LogException(System.Exception exception)
     {
     }
 
     [System.Diagnostics.Conditional("ENABLE_LOG")]
-    public static void LogException(Exception exception, Object context)
+    public static void LogException(System.Exception exception, Object context)
     {
     }
 
